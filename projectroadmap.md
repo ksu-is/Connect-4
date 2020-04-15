@@ -1,1 +1,8 @@
-testing testing
+Find a repository on Github that is related to the Connect 4 project. [x]
+Skim through it to see the idea behind it and make sure it has what you want it to do [x]
+Clone/Download so you can have it [x]
+Read through the code and try to understand the logic behind it [x]
+Run the code to see what it does [x]
+Make edits so that it will change things you want to change []
+Run code and sees what it happens []
+Repeat last two steps until satisfied []
