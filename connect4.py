@@ -5,7 +5,7 @@ import math
 
 BLACK = (0,0,0)
 WHITE = (255,255,255)
-RED = (255,0,0)
+GREEN = (3,252,90)
 YELLOW = (255,255,0)
 
 ROW_COUNT = 6
@@ -63,7 +63,7 @@ def draw_board(board):
 	for c in range(COLUMN_COUNT):
 		for r in range(ROW_COUNT):		
 			if board[r][c] == 1:
-				pygame.draw.circle(screen, RED, (int(c*SQUARESIZE+SQUARESIZE/2), height-int(r*SQUARESIZE+SQUARESIZE/2)), RADIUS)
+				pygame.draw.circle(screen, GREEN, (int(c*SQUARESIZE+SQUARESIZE/2), height-int(r*SQUARESIZE+SQUARESIZE/2)), RADIUS)
 			elif board[r][c] == 2: 
 				pygame.draw.circle(screen, YELLOW, (int(c*SQUARESIZE+SQUARESIZE/2), height-int(r*SQUARESIZE+SQUARESIZE/2)), RADIUS)
 	pygame.display.update()
@@ -101,7 +101,7 @@ while not game_over:
 			pygame.draw.rect(screen, WHITE, (0,0, width, SQUARESIZE))
 			posx = event.pos[0]
 			if turn == 0:
-				pygame.draw.circle(screen, RED, (posx, int(SQUARESIZE/2)), RADIUS)
+				pygame.draw.circle(screen, GREEN, (posx, int(SQUARESIZE/2)), RADIUS)
 			else: 
 				pygame.draw.circle(screen, YELLOW, (posx, int(SQUARESIZE/2)), RADIUS)
 		pygame.display.update()
@@ -119,7 +119,7 @@ while not game_over:
 					drop_piece(board, row, col, 1)
 
 					if winning_move(board, 1):
-						label = myfont.render("Player 1 wins!!", 1, RED)
+						label = myfont.render("Player 1 wins!!", 1, GREEN)
 						screen.blit(label, (40,10))
 						game_over = True
 
