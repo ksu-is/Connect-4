@@ -4,7 +4,7 @@ import sys
 import math
 
 BLUE = (0,0,255)
-BLACK = (0,0,0)
+WHITE = (255,255,255)
 RED = (255,0,0)
 YELLOW = (255,255,0)
 
@@ -58,7 +58,7 @@ def draw_board(board):
 	for c in range(COLUMN_COUNT):
 		for r in range(ROW_COUNT):
 			pygame.draw.rect(screen, BLUE, (c*SQUARESIZE, r*SQUARESIZE+SQUARESIZE, SQUARESIZE, SQUARESIZE))
-			pygame.draw.circle(screen, BLACK, (int(c*SQUARESIZE+SQUARESIZE/2), int(r*SQUARESIZE+SQUARESIZE+SQUARESIZE/2)), RADIUS)
+			pygame.draw.circle(screen, WHITE, (int(c*SQUARESIZE+SQUARESIZE/2), int(r*SQUARESIZE+SQUARESIZE+SQUARESIZE/2)), RADIUS)
 	
 	for c in range(COLUMN_COUNT):
 		for r in range(ROW_COUNT):		
@@ -98,7 +98,7 @@ while not game_over:
 			sys.exit()
 
 		if event.type == pygame.MOUSEMOTION:
-			pygame.draw.rect(screen, BLACK, (0,0, width, SQUARESIZE))
+			pygame.draw.rect(screen, WHITE, (0,0, width, SQUARESIZE))
 			posx = event.pos[0]
 			if turn == 0:
 				pygame.draw.circle(screen, RED, (posx, int(SQUARESIZE/2)), RADIUS)
@@ -107,7 +107,7 @@ while not game_over:
 		pygame.display.update()
 
 		if event.type == pygame.MOUSEBUTTONDOWN:
-			pygame.draw.rect(screen, BLACK, (0,0, width, SQUARESIZE))
+			pygame.draw.rect(screen, WHITE, (0,0, width, SQUARESIZE))
 			#print(event.pos)
 			# Ask for Player 1 Input
 			if turn == 0:
