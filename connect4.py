@@ -140,7 +140,7 @@ while not game_over:
 						game_over = True
 
 			count = count + 1
-			if count == 43:
+			if count == 43 and game_over == False:
 				game_over = True
 				label = myfont.render("Tie! Try Again", 1, BLACK)
 				screen.blit(label, (40,10))
